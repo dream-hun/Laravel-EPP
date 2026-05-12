@@ -47,7 +47,8 @@
     "require-dev": {
         "laravel/pint": "^1.29.1",
         "pestphp/pest": "^3.8.6",
-        "orchestra/testbench": "^9.17"
+        "orchestra/testbench": "^9.17",
+        "phpstan/phpstan": "^2.1"
     },
     "config": {
         "allow-plugins": {
