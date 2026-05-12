@@ -23,26 +23,15 @@ class UpdateCommand extends Command
 
     public const NAMESPACE = 'urn:ietf:params:xml:ns:contact-1.0';
 
-    /**
-     * @var DOMElement
-     */
     protected DOMElement $node;
 
-    /**
-     * @var Contact
-     */
     protected Contact $contact;
 
-    /**
-     * @var string
-     */
     protected string $registrar;
 
     /**
      * CreateCommand constructor.
      *
-     * @param Contact $contact
-     * @param string $registrar
      *
      * @throws EppException
      */
@@ -62,9 +51,6 @@ class UpdateCommand extends Command
         $n->appendChild($this->getExtensionNode());
     }
 
-    /**
-     * @return DOMElement
-     */
     protected function getUpdateNode(): DOMElement
     {
         $contact = new ContactTransformer($this->contact);
@@ -77,7 +63,6 @@ class UpdateCommand extends Command
      * Generate contact extension.
      *
      *
-     * @return DOMElement
      *
      * @throws EppException
      */
