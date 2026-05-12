@@ -7,7 +7,6 @@ use YWatchman\LaravelEPP\Support\Xml\Commands\Command;
 
 class LoginCommand extends Command
 {
-    /** @var DOMElement */
     protected DOMElement $node;
 
     /**

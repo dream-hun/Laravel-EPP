@@ -1,12 +1,8 @@
 <?php
 
-use YWatchman\LaravelEPP\Exceptions\EppException;
 use YWatchman\LaravelEPP\Models\Contact;
 use YWatchman\LaravelEPP\Support\Xml\Commands\Contact\CreateCommand;
 
-/**
- * @throws EppException
- */
 function makeContactCommand(): CreateCommand
 {
     $contact = new Contact([
@@ -19,7 +15,7 @@ function makeContactCommand(): CreateCommand
         'country' => 'NL',
         'phone' => '+31.201234567',
         'email' => 'test@example.nl',
-        'legalForm' => 'PERSON',
+        'legalForm' => 'PERSOON',
     ]);
 
     return new CreateCommand($contact);
