@@ -86,7 +86,7 @@ class CreateCommand extends Command
     private function mapLegalForm(string $form): string
     {
         return match (strtoupper($form)) {
-            'PERSON' => 'PERSON',
+            'PERSON' => 'PERSOON',
             'OTHER' => 'ANDERS',
             default => strtoupper($form),
         };
